@@ -1,11 +1,12 @@
 # used for acronyms
 class Acronym
+  attr_accessor :word, :acronym
   def self.abbreviate(str)
-    a = str.split(' ')
-    res = ''
-    a.each do |single|
-      res += single[0]
+    @word = str.split(/\W+/)
+    @acronym = ''
+    @word.each do |single|
+      @acronym.concat(single[0].upcase)
     end
-    p res
+    p @acronym
   end
 end
