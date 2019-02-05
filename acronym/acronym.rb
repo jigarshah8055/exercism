@@ -1,10 +1,10 @@
 # used for acronyms
 class Acronym
-  def self.abbreviate(sy
+  def self.abbreviate(str)
     word = str.split(/\W+/)
     acronym = ''
     word.each do |single|
-    acronym.concat(single.first.upcase)
+      acronym.concat(single.chars.first.upcase)
     end
     acronym
   end
