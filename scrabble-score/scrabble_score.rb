@@ -1,6 +1,6 @@
 # Scrabble words program
 class Scrabble
-  attr_accessor :score_hash, :ip_str
+  attr_accessor :ip_str
   def initialize(ip)
     @ip_str = ip
   end
@@ -16,5 +16,9 @@ class Scrabble
       end
     end
     sum
+  end
+
+  def self.score(ip)
+    new(ip).score
   end
 end
